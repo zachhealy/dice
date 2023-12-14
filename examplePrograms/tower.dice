@@ -1,0 +1,16 @@
+buyin
+  sitdown hanoi(n, source, target, auxiliary)
+    if n > 0 then
+      hanoi(n - 1, source, auxiliary, target)
+      shoot “Move disk “ + n + “ from “ + source + “ to “ + target
+      hanoi(n – 1, auxiliary, target, source)
+    endif
+  standup
+
+  place numDisks = 3
+  place sourcePeg = “A”
+  place targetPeg = “C”
+  place auxiliaryPeg = “B
+
+  hanoi(numDisks, sourcePeg, targetPeg, auxiliaryPeg)
+cashout

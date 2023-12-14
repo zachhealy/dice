@@ -1,0 +1,27 @@
+buyin
+  place arr = [2, 1, 7, 3, 5, 9]
+
+  shoot "Given Array: "
+  shoot arr
+
+  place m = 4
+  place swap = 1
+
+  while swap > 0 do
+    place swap = 0
+
+    for place i = 0 to m do
+      if arr[i] > arr[i + 1] then
+        place temp = arr[i]
+        place arr[i] = arr[i + 1]
+        place arr[i + 1] = temp
+        place swap = 1
+      endif
+    endfor
+
+  endwhile
+  
+  shoot "Sorted Array: "
+  shoot arr
+
+cashout

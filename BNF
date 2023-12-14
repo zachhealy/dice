@@ -1,0 +1,62 @@
+<program> ::= "buyin" <block> "cashout"
+
+<block> ::= <statement>+
+
+<statement> ::= <assignment> 
+              | <expression> 
+              | <return-statement> 
+              | <control-statement>
+              | <function-declaration>
+
+<assignment> ::= "place" <variable> "=" <expression>
+
+<expression> ::= <term> 
+               | <expression> "+" <term>
+               | <array>
+
+<term> ::= <factor> 
+         | <term> "*" <factor>
+
+<factor> ::= <number> 
+            | <string> 
+            | <variable> 
+            | "(" <expression> ")"
+            | <array>
+
+<return-statement> ::= "return" <expression>
+
+<control-statement> ::= <if-statement> 
+                      | <while-loop> 
+                      | <for-loop>
+
+<function-declaration> ::= "sitdown" <id> "(" [<parameter-list>] ")" <block> "standup"
+
+<print-statement> ::= "shoot" <expression>
+
+<id> ::= [a-zA-Z]+
+
+<parameter-list> ::= <id> {"," <id>}
+
+<if-statement> ::= "if" <expression> "then" <block> ["else" <block>] "endif"
+
+<while-loop> ::= "while" <expression> "do" <block> "endwhile"
+
+<for-loop> ::= "for" <assignment> "to" <expression> "do" <block> "endfor"
+
+<variable> ::= "place" <id> | <array>
+
+<array> ::= "[" [<expression-list>] "]"
+
+<array-index> ::= <variable> "[" <expression> "]"
+
+<expression-list> ::= <expression> {"," <expression>}
+
+<number> ::= [0-9]+ | [0-9]+ "." [0-9]+
+
+<string> ::= "\"" <characters> "\""
+
+<characters> ::= <character>*
+
+<character> ::= [a-zA-Z0-9_]
+
+<whitespace> ::= " " | "\t" | "\n" | "\r"

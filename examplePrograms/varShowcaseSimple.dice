@@ -1,0 +1,19 @@
+buyin
+  place x = 10
+  shoot x
+
+  place y = "This is a String!"
+  shoot y
+
+  place myArray = [1, 2, 3, 4]
+  shoot myArray
+
+  place z = 2
+  shoot myArray[z]
+
+  place myArray[z] = 1
+  shoot myArray
+
+  place myArray[z + 1] = 1
+  shoot myArray
+cashout

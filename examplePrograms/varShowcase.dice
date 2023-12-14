@@ -1,0 +1,49 @@
+buyin
+  shoot "======================================="
+  shoot "place x = 10"
+  shoot "shoot x"
+  shoot "-----"
+  place x = 10
+  shoot x
+  shoot "======================================="
+
+  shoot "======================================="
+  shoot "place y = 'This is a String!'"
+  shoot "shoot y"
+  shoot "-----"
+  place y = "This is a String!"
+  shoot y
+  shoot "======================================="
+
+  shoot "======================================="
+  shoot "place myArray = [1, 2, 3, 4]"
+  shoot "shoot myArray"
+  shoot "-----"
+  place myArray = [1, 2, 3, 4]
+  shoot myArray
+  shoot "======================================="
+
+  shoot "======================================="
+  shoot "place z = 2"
+  shoot "shoot myArray[z]"
+  shoot "-----"
+  place z = 2
+  shoot myArray[z]
+  shoot "======================================="
+
+  shoot "======================================="
+  shoot "place myArray[z] = 1"
+  shoot "shoot myArray"
+  shoot "-----"
+  place myArray[z] = 1
+  shoot myArray
+  shoot "======================================="
+  
+  shoot "======================================="
+  shoot "place myArray[z + 1] = 1"
+  shoot "shoot myArray"
+  shoot "-----"
+  place myArray[z + 1] = 1
+  shoot myArray
+  shoot "======================================="
+cashout
